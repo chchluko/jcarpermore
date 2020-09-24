@@ -22,3 +22,15 @@ Route::get('/home', 'HomeController@index')->name('home');
 //Route::get('medicos/create', 'MedicController@create')->name('nuevomedico');
 
 Route::resource('medicos', MedicController::class);
+
+
+Route::get('usernew', function(){
+	$user = new App\User;
+	$user->name = 'Prueba';
+	$user->username = 4545;
+	$user->email = 'prueba@proa.com.mx';
+	$user->password = bcrypt('4545');
+	$user->save();
+
+	return $user;
+});

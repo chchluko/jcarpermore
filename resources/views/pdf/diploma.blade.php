@@ -112,10 +112,10 @@ footer {
 
 </head>
 <body style="text-align: justify;">
-<h1>Diploma Jornadas Medicas</h1>
-
-<h2>Otorgado al Dr:</h2>
-<h3>{{ $medic->nombre }}</h3>
-
+<h1>Diploma Jornadas Medicas 2020</h1>
+<h1>Otorgado al Dr:</h1>
+<h1>{{ $medic->nombre }} {{ $medic->paterno }} {{ $medic->materno }}</h1><br>
+<h1>Con especialidad en:</h1>
+<h1>{{ $medic->especialidad }}</h1>
 </body>
 </html>

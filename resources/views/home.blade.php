@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Bienvenido </div>
+                <div class="card-header">Bienvenido Dr. {{ Auth::user()->name }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,7 +14,9 @@
                         </div>
                     @endif
 
-                    {{ Auth::user()->name }}
+
+                    <a href="{{ route('medicos.show',1 /*Auth::user()->username*/) }}"><p>Aqui puedes descargar tu diploma</p></a>
+
                 </div>
             </div>
         </div>

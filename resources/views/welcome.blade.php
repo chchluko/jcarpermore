@@ -75,8 +75,8 @@
                     @else
                         <a href="{{ route('login') }}">Acceder</a>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Registro</a>
+                        @if (Route::has('medicos.create'))
+                            <a href="{{ route('medicos.create') }}">Medico No Resgitrado</a>
                         @endif
                     @endauth
                 </div>
