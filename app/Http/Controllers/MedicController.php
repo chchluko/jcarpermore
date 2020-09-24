@@ -37,6 +37,7 @@ class MedicController extends Controller
     public function store(Request $request)
     {
         Medic::create($request->all());
+        return view('medic.gracias');
     }
 
     /**
