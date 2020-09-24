@@ -18,3 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//Route::get('medicos/create', 'MedicController@create')->name('nuevomedico');
+
+Route::resource('medicos', MedicController::class);
