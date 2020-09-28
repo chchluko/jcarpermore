@@ -51,7 +51,7 @@ class MedicController extends Controller
         $medic = Medic::find($id);
         $date = date('Y-m-d');
 
-        $view =  \View::make('pdf.diploma', compact('date','medic'))->render();
+        $view =  \View::make('pdf.diploma', compact('date', 'medic'))->render();
         // $pdf = PDF::loadView('pdf.invoice', $data);
 
         $pdf = \App::make('dompdf.wrapper');
@@ -59,9 +59,9 @@ class MedicController extends Controller
         // $pdf->loadHTML('<h1>Test</h1>');
         $pdf->loadHTML($view);
 
-
-         return $pdf->download('Diploma.pdf');
-       // return $pdf->stream();
+        $pdf->setPaper('letter', 'landscape');
+        return $pdf->download('Diploma.pdf');
+        // return $pdf->stream();
     }
 
     /**

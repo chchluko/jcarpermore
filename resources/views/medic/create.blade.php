@@ -90,16 +90,17 @@
                     </div>
                     <div class="form-group row mb-0">
                         <div class="col-md-6 offset-md-4">
-                            <button type="submit" class="btn btn-primary">
+                            <button type="submit" class="btn btn-outline-secondary">
                                 {{ __('Registrarse') }}
                             </button>
                         </div>
                     </div>
                 </div>
                 </form>
-                </div>
-            </div>
+            </div><br><br>
         </div>
     </div>
+    @include('partials.arte');
 </div>
+
 @endsection

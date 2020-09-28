@@ -68,8 +68,9 @@
                         </div>
                     </form>
                 </div>
-            </div>
+            </div><br><br>
         </div>
     </div>
+ @include('partials.arte');
 </div>
 @endsection

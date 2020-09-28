@@ -11,80 +11,72 @@
 
         <!-- Styles -->
         <style>
-            html, body {
-               /* background-color: #fff; */
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-                background:  url("{{asset('images/fondojornadas.png')}}");
-                background-size: cover;
-                background-repeat: no-repeat;
-            }
 
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
+         /*       .flex-center {
                 align-items: center;
                 display: flex;
                 justify-content: center;
+                flex-direction: row-reverse;
             }
 
-            .position-ref {
-                position: relative;
+            .logo img{
+width: 100%;
+            }
+            .jornadas img{
+                width: 10%;
             }
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
+        */
+            .container {
+ /* max-width: 1200px;*/
+  display: flex;
+  align-items: center;
+ /* -webkit-justify-content: center;*/
+ justify-content: center;
+  flex-direction: column;
+  /* Safari */
+  justify-content: center;
+}
 
-            .content {
-                text-align: center;
-            }
+.item {
+  padding: 10px;
+}
 
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.links > a {
                 color: #636b6f;
                 padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
-            }
 
-            .m-b-md {
-                margin-bottom: 30px;
+    font-size: 1vw;
             }
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Inicio</a>
-                    @else
-                        <a href="{{ route('login') }}">Acceder</a>
 
-                        @if (Route::has('medicos.create'))
-                            <a href="{{ route('medicos.create') }}">Medico No Resgitrado</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
 
-            <div class="content">
+         <div class="container">
+            <div class="item"><img src="{{asset('images/portalmedicochopo.png')}}" alt=""></div>
+        <div class="item">@if (Route::has('login'))
+            <div class="links">
+                @auth
+                    <a href="{{ url('/home') }}">Inicio</a>
 
+                @else
+                    <a href="{{ route('login') }}">Descargue su constancia aquí</a>
+                    @if (Route::has('medicos.create'))
+                        <a href="{{ route('medicos.create') }}">Médico No Registrado</a>
+                    @endif
+                    <a title="Aviso de privacidad"
+            href="https://www.chopo.com.mx/guadalajara/informacion-institucional#privacidad" target="_blanck">Aviso de privacidad</a>
+                @endauth
             </div>
-        </div>
+        @endif</div>
     </body>
 </html>

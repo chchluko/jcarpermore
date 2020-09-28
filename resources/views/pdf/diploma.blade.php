@@ -5,7 +5,17 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title></title>
 <style type="text/css" media="screen">
+html {
+	margin: 0pt 0pt;
+}
+.nombre {
+  position:fixed !important;
+  left: 100px;
+  bottom: 535px;
+  color: #005E79;
+  z-index:-10 !important}
 
+/*
 .clearfix:after {
 	content: "";
 	display: table;
@@ -15,22 +25,25 @@
 a {
   color: #5D6975;
   text-decoration: underline;
-  }
+  }*/
 
 body {
-  position: relative;
-  width: 18cm;
+ /*  position: relative;
+ width: 18cm;
   height: 29.7cm;
-  margin: 0 auto;
+  margin: 0 auto;*/
   color: #001028;
-  background: #FFFFFF;
-  font-family: Arial, sans-serif;
+  /*background: #FFFFFF;*/
+  background:  url("{{asset('images/constancia.jpg')}}");
+            background-size: cover;
+            background-repeat: no-repeat;
+  /*           padding: 0;
+ font-family: Arial, sans-serif;
   font-size: 14px;
-  font-family: Arial;
+  font-family: Arial;*/
      }
-
-header {
-  padding: 10px 0;
+ /*header {
+ padding: 10px 0;
   margin-bottom: 30px;
 }
 
@@ -107,15 +120,18 @@ footer {
   border-top: 1px solid #C1CED9;
   padding: 8px 0;
   text-align: center;
-}
+}*/
 </style>
 
 </head>
 <body style="text-align: justify;">
-<h1>Diploma Jornadas Medicas 2020</h1>
+<!--h1>Diploma Jornadas Medicas 2020</h1>
 <h1>Otorgado al Dr:</h1>
 <h1>{{ $medic->nombre }} {{ $medic->paterno }} {{ $medic->materno }}</h1><br>
 <h1>Con especialidad en:</h1>
-<h1>{{ $medic->especialidad }}</h1>
+<h1>{{ $medic->especialidad }}</h1-->
+    <div class="nombre">
+        <h3>NOMBRE DEL MEDICO</h3>
+    </div>
 </body>
 </html>

@@ -15,11 +15,12 @@
                     @endif
 
 
-                    <a href="{{ route('medicos.show',1 /*Auth::user()->username*/) }}"><p>Aqui puedes descargar tu diploma</p></a>
+                    <a href="{{ route('medicos.show',1 /*Auth::user()->username*/) }}"><p>Aqui puede descargar su diploma</p></a>
 
                 </div>
-            </div>
+            </div> <br>
         </div>
     </div>
+    @include('partials.arte');
 </div>
 @endsection
