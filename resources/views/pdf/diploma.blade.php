@@ -10,7 +10,7 @@ html {
 }
 body {
   color: #001028;
-  background:  url("{{asset('images/constancia.jpg')}}");
+  background:  url("images/constancia.jpg");
             background-size: cover;
             background-repeat: no-repeat;
      }
@@ -26,7 +26,6 @@ body {
 <body style="text-align: justify;">
     <div class="nombre">
         <h3>{{ $medic->nombre }} {{ $medic->paterno }} {{ $medic->materno }}</h3>
-        <img src="https://jornadaschopo.sapproa.com.mx:4434/images/constancia.jpg" alt="">
     </div>
 </body>
 </html>

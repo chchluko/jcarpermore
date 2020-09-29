@@ -11,7 +11,9 @@
                <p>En breve nuestro equipo se pondra en contacto contigo.</p>
                 </div>
             </div>
+            <br>
         </div>
     </div>
+    @include('partials.arte');
 </div>
 @endsection

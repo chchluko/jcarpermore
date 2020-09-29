@@ -60,8 +60,8 @@ class MedicController extends Controller
         $pdf->loadHTML($view);
 
         $pdf->setPaper('letter', 'landscape');
-        //  return $pdf->download('Diploma.pdf');
-       return $pdf->stream();
+         return $pdf->download('Diploma.pdf');
+       // return $pdf->stream();
     }
 
     /**
