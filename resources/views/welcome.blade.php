@@ -54,7 +54,7 @@ img {
                 text-decoration: none;
                 text-transform: uppercase;
 
-    font-size: 1vw;
+    font-size: 2vw;
             }
         </style>
     </head>
@@ -63,20 +63,20 @@ img {
 
          <div class="container">
             <div class="item"><img src="{{asset('images/portalmedicochopo.png')}}" alt=""></div>
-        <div class="item">@if (Route::has('login'))
-            <div class="links">
+            @if (Route::has('login'))
                 @auth
-                    <a href="{{ url('/home') }}">Inicio</a>
-
+                <div class="item links"><a href="{{ url('/home') }}">Inicio</a></div>
                 @else
-                    <a href="{{ route('login') }}">Descargue su constancia aquí</a>
+                    <div class="item links"><a href="{{ route('login') }}">Descargue su constancia aquí</a></div>
                     @if (Route::has('medicos.create'))
-                        <a href="{{ route('medicos.create') }}">Médico No Registrado</a>
+                    <div class="item links"><a href="{{ route('medicos.create') }}">Médico No Registrado</a></div>
                     @endif
-                    <a title="Aviso de privacidad"
-            href="https://www.chopo.com.mx/guadalajara/informacion-institucional#privacidad" target="_blanck">Aviso de privacidad</a>
+
                 @endauth
-            </div>
-        @endif</div>
+        @endif
+    <div class="item links"><a title="Aviso de privacidad"
+            href="https://www.chopo.com.mx/guadalajara/informacion-institucional#privacidad" target="_blanck">Aviso de privacidad</a>
+    </div>
+    </div>
     </body>
 </html>

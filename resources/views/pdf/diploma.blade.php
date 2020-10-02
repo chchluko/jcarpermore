@@ -16,16 +16,22 @@ body {
      }
      .nombre {
   position:fixed !important;
-  left: 100px;
-  bottom: 535px;
+  left: 90px;
+  bottom: 515px;
+  width: 560px;
   color: #005E79;
-  z-index:-10 !important}
+ /* border-style: solid;*/
+  text-align: center;
+  font-family: 'helvetica';
+  font-weight: 500;
+  z-index:-10 !important;
+  }
 </style>
 
 </head>
 <body style="text-align: justify;">
     <div class="nombre">
-        <h3>{{ $medic->nombre }} {{ $medic->paterno }} {{ $medic->materno }}</h3>
+        {{ $medic->nombre }} {{ $medic->paterno }} {{ $medic->materno }}
     </div>
 </body>
 </html>
