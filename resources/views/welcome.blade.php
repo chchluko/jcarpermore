@@ -11,72 +11,61 @@
 
         <!-- Styles -->
         <style>
-
-         /*       .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-                flex-direction: row-reverse;
-            }
-
-            .logo img{
-width: 100%;
-            }
-            .jornadas img{
-                width: 10%;
-            }
-
-        */
-            .container {
- /* max-width: 1200px;*/
-  display: flex;
-  align-items: center;
- /* -webkit-justify-content: center;*/
- justify-content: center;
-  flex-direction: column;
-  /* Safari */
-  justify-content: center;
+        .container {
+             /* max-width: 1200px;*/
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+.item1{
+    flex: 0 1 auto;
+    align-self: stretch;
 }
-
-.item {
-  padding: 10px;
-}
-
-img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-.links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-
-    font-size: 2vw;
+.item3, .item4, .item5, .item2{
+    flex: 0 1 auto;
+    align-self: flex-end;
+    padding: 5px
+    }
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        @font-face {
+            font-family: 'Gotham';
+            src: url('{{asset('fonts/Gotham-Bold.woff')}}') format('woff'); /* Modern Browsers */
+            font-weight: 300;
+            font-style: normal;
+        }
+        .links > a {
+            color: #636b6f;
+            font-family: 'Gotham';
+            padding: 0 25px;
+            letter-spacing: .1rem;
+            text-decoration: none;
+            /*   text-transform: uppercase;*/
+            font-size: 2vw;
             }
         </style>
     </head>
     <body>
-
-
-         <div class="container">
-            <div class="item"><img src="{{asset('images/portalmedicochopo.png')}}" alt=""></div>
-            @if (Route::has('login'))
-                @auth
-                <div class="item links"><a href="{{ url('/home') }}">Inicio</a></div>
-                @else
-                    <div class="item links"><a href="{{ route('login') }}">Descargue su constancia aquí</a></div>
-                    @if (Route::has('medicos.create'))
-                    <div class="item links"><a href="{{ route('medicos.create') }}">Médico No Registrado</a></div>
-                    @endif
-
-                @endauth
-        @endif
-    <div class="item links"><a title="Aviso de privacidad"
-            href="https://www.chopo.com.mx/guadalajara/informacion-institucional#privacidad" target="_blanck">Aviso de privacidad</a>
-    </div>
-    </div>
+        <div class="container">
+            <div class="item1"><img src="{{asset('images/portalmedicochopo.png')}}" alt=""></div>
+                @if (Route::has('login'))
+                    @auth
+                        <div class="item2 links"><a href="{{ url('/home') }}">Inicio</a></div>
+                        @else
+                            <div class="item3 links"><a href="{{ route('login') }}">Descargue su constancia aquí</a></div>
+                        @if (Route::has('medicos.create'))
+                            <div class="item4 links"><a href="{{ route('medicos.create') }}">Médico No Registrado</a></div>
+                        @endif
+                    @endauth
+                @endif
+            <div class="item5 links">
+                <a title="Aviso de privacidad"
+                href="https://www.chopo.com.mx/guadalajara/informacion-institucional#privacidad" target="_blanck">Aviso de privacidad</a>
+            </div>
+        </div>
     </body>
 </html>

@@ -50,7 +50,7 @@ class MedicController extends Controller
     {
         $medic = Medic::find($id);
         $date = date('Y-m-d');
-//return view('pdf.diploma',compact('date', 'medic'));
+    //return view('pdf.diploma',compact('date', 'medic'));
 
         $view =  \View::make('pdf.diploma', compact('date', 'medic'))->render();
         // $pdf = PDF::loadView('pdf.invoice', $data);

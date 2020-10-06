@@ -8,6 +8,12 @@
 html {
 	margin: 0pt 0pt;
 }
+/*@font-face {
+    font-family: 'Gotham';
+    src: url('GothamBook.ttf');
+    font-weight: 300;
+   font-style: normal;
+     }*/
 body {
   color: #001028;
   background:  url("images/constancia.jpg");
@@ -22,7 +28,7 @@ body {
   color: #005E79;
  /* border-style: solid;*/
   text-align: center;
-  font-family: 'helvetica';
+  font-family: helvetica;
   font-weight: 500;
   z-index:-10 !important;
   }
