@@ -34,3 +34,5 @@ Route::get('usernew', function(){
 
 	return $user;
 });
+
+Route::get('sync', 'MedicController@sync' );

@@ -13,10 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-
-                    <a href="{{ route('medicos.show',1 /*Auth::user()->username*/) }}"><p>Aqui puede descargar su diploma</p></a>
-
+                    <a href="{{ route('medicos.show',Auth::user()->medico->id) }}"><p>Aqui puede descargar su diploma</p></a>
                 </div>
             </div> <br>
         </div>

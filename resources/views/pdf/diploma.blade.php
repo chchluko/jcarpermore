@@ -23,7 +23,7 @@ body {
      .nombre {
   position:fixed !important;
   left: 90px;
-  bottom: 515px;
+  bottom: 522px;
   width: 560px;
   color: #005E79;
  /* border-style: solid;*/
@@ -31,6 +31,7 @@ body {
   font-family: helvetica;
   font-weight: 500;
   z-index:-10 !important;
+  font-size: 1.7em;
   }
 </style>
 

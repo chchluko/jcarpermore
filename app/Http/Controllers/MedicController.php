@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Medic;
+use App\User;
 use Illuminate\Http\Request;
 
 
@@ -15,7 +16,10 @@ class MedicController extends Controller
      */
     public function index()
     {
-        //
+        $products = Medic::latest()->paginate(5);
+
+        return view('medic.index',compact('products'))
+            ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**
@@ -49,6 +53,8 @@ class MedicController extends Controller
     public function show(Medic $medic, $id)
     {
         $medic = Medic::find($id);
+        //where('iduser',$id)->get();
+       // dd($medic);
         $date = date('Y-m-d');
     //return view('pdf.diploma',compact('date', 'medic'));
 
@@ -71,9 +77,10 @@ class MedicController extends Controller
      * @param  \App\Medic  $medic
      * @return \Illuminate\Http\Response
      */
-    public function edit(Medic $medic)
+    public function edit(Medic $medic, $id)
     {
-        //
+        $medic = Medic::find($id);
+        return view('medic.edit',compact('medic'));
     }
 
     /**
@@ -83,9 +90,12 @@ class MedicController extends Controller
      * @param  \App\Medic  $medic
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Medic $medic)
+    public function update(Request $request, Medic $medic, $id)
     {
-        //
+        $medic = Medic::find($id);
+        $medic->update($request->all());
+        return redirect()->route('medicos.index')
+                        ->with('success','Actualziación completa');
     }
 
     /**
@@ -97,5 +107,24 @@ class MedicController extends Controller
     public function destroy(Medic $medic)
     {
         //
+    }
+
+    public function sync()
+    {
+        $Medicos = Medic::where('iduser','!=',NULL )->where('sync',0)->get();
+ //       dd($Medicos);
+        foreach($Medicos as $item) {
+
+        $user = new User();
+        $user->name = $item->nombre;
+        $user->username = $item->iduser;
+        $user->email = $item->email;
+        $user->password = bcrypt($item->iduser);
+        $user->save();
+
+        $item->sync = 1;
+        $item->save();
+        }
+      ///  return redirect()->route('usuarios.index');
     }
 }
