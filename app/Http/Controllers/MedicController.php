@@ -9,6 +9,11 @@ use Illuminate\Http\Request;
 
 class MedicController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth', ['only' => ['edit', 'index', 'show']]);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -17,9 +22,12 @@ class MedicController extends Controller
     public function index()
     {
         $products = Medic::latest()->paginate(5);
-
-        return view('medic.index',compact('products'))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+        if (auth()->user()->username == 4279) {
+            return view('medic.index', compact('products'))
+                ->with('i', (request()->input('page', 1) - 1) * 5);
+        } else {
+            return view('home');
+        }
     }
 
     /**
@@ -54,9 +62,9 @@ class MedicController extends Controller
     {
         $medic = Medic::find($id);
         //where('iduser',$id)->get();
-       // dd($medic);
+        // dd($medic);
         $date = date('Y-m-d');
-    //return view('pdf.diploma',compact('date', 'medic'));
+        //return view('pdf.diploma',compact('date', 'medic'));
 
         $view =  \View::make('pdf.diploma', compact('date', 'medic'))->render();
         // $pdf = PDF::loadView('pdf.invoice', $data);
@@ -67,8 +75,8 @@ class MedicController extends Controller
         $pdf->loadHTML($view);
 
         $pdf->setPaper('letter', 'landscape');
-         return $pdf->download('Diploma.pdf');
-       // return $pdf->stream();
+        return $pdf->download('Diploma.pdf');
+        // return $pdf->stream();
     }
 
     /**
@@ -80,7 +88,11 @@ class MedicController extends Controller
     public function edit(Medic $medic, $id)
     {
         $medic = Medic::find($id);
-        return view('medic.edit',compact('medic'));
+        if (auth()->user()->username == 4279) {
+            return view('medic.edit', compact('medic'));
+        } else {
+            return view('home');
+        }
     }
 
     /**
@@ -95,7 +107,7 @@ class MedicController extends Controller
         $medic = Medic::find($id);
         $medic->update($request->all());
         return redirect()->route('medicos.index')
-                        ->with('success','Actualziación completa');
+            ->with('success', 'Actualziación completa');
     }
 
     /**
@@ -111,20 +123,20 @@ class MedicController extends Controller
 
     public function sync()
     {
-        $Medicos = Medic::where('iduser','!=',NULL )->where('sync',0)->get();
- //       dd($Medicos);
-        foreach($Medicos as $item) {
+        $Medicos = Medic::where('iduser', '!=', NULL)->where('sync', 0)->get();
+        //       dd($Medicos);
+        foreach ($Medicos as $item) {
 
-        $user = new User();
-        $user->name = $item->nombre;
-        $user->username = $item->iduser;
-        $user->email = $item->email;
-        $user->password = bcrypt($item->iduser);
-        $user->save();
+            $user = new User();
+            $user->name = $item->nombre;
+            $user->username = $item->iduser;
+            $user->email = $item->email;
+            $user->password = bcrypt($item->iduser);
+            $user->save();
 
-        $item->sync = 1;
-        $item->save();
+            $item->sync = 1;
+            $item->save();
         }
-      ///  return redirect()->route('usuarios.index');
+        ///  return redirect()->route('usuarios.index');
     }
 }
