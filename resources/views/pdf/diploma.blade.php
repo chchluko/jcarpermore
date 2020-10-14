@@ -33,12 +33,15 @@ body {
   z-index:-10 !important;
   font-size: 1.7em;
   }
+
 </style>
 
 </head>
 <body style="text-align: justify;">
-    <div class="nombre">
-        {{ $medic->nombre }} {{ $medic->paterno }} {{ $medic->materno }}
+    <div class="nombre" @if (strlen($medic->nombre) >= 10)
+        style="bottom: 555px"
+    @endif>
+        {{ $medic->paterno }} {{ $medic->materno }} {{ $medic->nombre }}
     </div>
 </body>
 </html>

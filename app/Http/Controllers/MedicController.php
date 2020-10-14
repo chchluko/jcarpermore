@@ -123,8 +123,8 @@ class MedicController extends Controller
 
     public function sync()
     {
-        $Medicos = Medic::where('iduser', '!=', NULL)->where('sync', 0)->get();
-        //       dd($Medicos);
+        $Medicos = Medic::where('iduser', '!=', NULL)->where('sync', 0)->offset(0)->limit(10000)->get();
+  //             dd($Medicos);
         foreach ($Medicos as $item) {
 
             $user = new User();
