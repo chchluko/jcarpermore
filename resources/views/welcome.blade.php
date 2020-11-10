@@ -39,26 +39,29 @@
             font-style: normal;
         }
         .links > a {
-            color: #636b6f;
+            /*color: #00E3B6;*/
+            color: white;
             font-family: 'Gotham';
             padding: 0 25px;
             letter-spacing: .1rem;
             text-decoration: none;
             /*   text-transform: uppercase;*/
-            font-size: 2vw;
+            font-size: 1.5vw;
+            }body{
+                background-color: #00E3B6;
             }
         </style>
     </head>
     <body>
         <div class="container">
-            <div class="item1"><img src="{{asset('images/portalmedicochopo.png')}}" alt=""></div>
+            <div class="item1"><img src="{{asset('images/top.jpg')}}" alt=""></div>
                 @if (Route::has('login'))
                     @auth
                         <div class="item2 links"><a href="{{ url('/home') }}">Inicio</a></div>
                         @else
                             <div class="item3 links"><a href="{{ route('login') }}">Descargue su constancia aquí</a></div>
                         @if (Route::has('medicos.create'))
-                            <div class="item4 links"><a href="{{ route('medicos.create') }}">Médico No Registrado</a></div>
+                            <div class="item4 links"><a href="{{ route('medicos.create') }}">Cliente No Registrado</a></div>
                         @endif
                     @endauth
                 @endif

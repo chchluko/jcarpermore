@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{-- config('app.name', 'Jornadas Medicas') --}}Jornadas Medicas</title>
+    <title>{{-- config('app.name', 'Jornadas Medicas') --}}Jornadas Carpermor</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -37,7 +37,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{-- config('app.name', 'Jornadas Medicas') --}}<img src="{{asset('images/logotop.png')}}" alt="" height="30px" >
+                    {{-- config('app.name', 'Jornadas Medicas') --}}<img src="{{asset('images/carpermor.gif')}}" alt="" height="30px" >
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -58,7 +58,7 @@
                             </li>
                             @if (Route::has('medicos.create'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('medicos.create') }}">{{ __('Médico No Resgitrado') }}</a>
+                                    <a class="nav-link" href="{{ route('medicos.create') }}">{{ __('Cliente No Resgitrado') }}</a>
                                 </li>
                             @endif
                         @else

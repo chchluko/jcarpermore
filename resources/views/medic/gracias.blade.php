@@ -8,7 +8,7 @@
                 <div class="card-header">{{ __('Registro exitoso!') }}</div>
 
                 <div class="card-body">
-               <p>En breve nuestro equipo se pondra en contacto contigo.</p>
+               <p>Tu constacia esta en tramite, en breve nuestro equipo se pondra en contacto contigo.</p>
                 </div>
             </div>
             <br>
