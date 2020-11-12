@@ -22,11 +22,11 @@ body {
      }
      .nombre {
   position:fixed !important;
-  left: 90px;
-  bottom: 522px;
-  width: 560px;
-  color: #005E79;
- /* border-style: solid;*/
+  left: 370px;
+  bottom: 450px;
+  width: 660px;
+  color: #737373;
+/*  border-style: solid;*/
   text-align: center;
   font-family: helvetica;
   font-weight: 500;
@@ -39,7 +39,7 @@ body {
 </head>
 <body style="text-align: justify;">
     <div class="nombre" @if (strlen($medic->nombre) >= 10)
-        style="bottom: 555px"
+        style="bottom: 450px"
     @endif>
         {{ $medic->paterno }} {{ $medic->materno }} {{ $medic->nombre }}
     </div>

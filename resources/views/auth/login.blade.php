@@ -14,7 +14,7 @@
 
 
                         <div class="form-group row">
-                            <label for="username" class="col-sm-4 col-form-label text-md-right">{{ __('Numero de Cliente Carpermor') }}</label>
+                            <label for="username" class="col-sm-4 col-form-label text-md-right">{{ __('Número de Cliente Carpermor') }}</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="text" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" name="username" value="{{ old('username') }}" required autofocus>
@@ -32,7 +32,7 @@
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-                                <span class="help-block">La contraseña es su Numero de Cliente Carpermor</span>
+                                <span class="help-block">La contraseña es su Número de Cliente Carpermor</span>
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">

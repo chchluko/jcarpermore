@@ -37,9 +37,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-
-    public function medico()
+    public function lab()
     {
-        return $this->hasOne('App\Medic','iduser','username');
+        return $this->hasOne('App\Lab','iduser','username');
     }
 }

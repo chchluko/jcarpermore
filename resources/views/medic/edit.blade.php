@@ -8,7 +8,7 @@
                 <div class="card-header">{{ __('Registrarse') }}</div>
 
                 <div class="card-body">
-                    <form action="{{ route('medicos.update',$medic->id) }}" method="POST">
+                    <form action="{{ route('registro.update',$medic->id) }}" method="POST">
                         @csrf
                         @method('PUT')
 

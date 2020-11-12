@@ -60,8 +60,8 @@
                         <div class="item2 links"><a href="{{ url('/home') }}">Inicio</a></div>
                         @else
                             <div class="item3 links"><a href="{{ route('login') }}">Descargue su constancia aquí</a></div>
-                        @if (Route::has('medicos.create'))
-                            <div class="item4 links"><a href="{{ route('medicos.create') }}">Cliente No Registrado</a></div>
+                        @if (Route::has('registro.create'))
+                            <div class="item4 links"><a href="{{ route('registro.create') }}">Cliente No Registrado</a></div>
                         @endif
                     @endauth
                 @endif

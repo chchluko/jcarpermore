@@ -21,7 +21,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //Route::get('medicos/create', 'MedicController@create')->name('nuevomedico');
 
-Route::resource('medicos', MedicController::class);
+Route::resource('registro', MedicController::class);
+Route::resource('labs', LabController::class);
 
 
 Route::get('usernew', function(){

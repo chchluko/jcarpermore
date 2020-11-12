@@ -38,8 +38,8 @@
         <td>{{ $product->email }}</td>
         <td>{{ $product->telefono }}</td>
         <td>
-                <a class="btn btn-info" href="{{ route('medicos.show',$product->id) }}">Ver</a>
-                <a class="btn btn-primary" href="{{ route('medicos.edit',$product->id) }}">Editar</a>
+                <a class="btn btn-info" href="{{ route('registro.show',$product->id) }}">Ver</a>
+                <a class="btn btn-primary" href="{{ route('registro.edit',$product->id) }}">Editar</a>
         </td>
     </tr>
     @endforeach

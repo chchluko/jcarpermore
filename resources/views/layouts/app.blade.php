@@ -37,7 +37,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{-- config('app.name', 'Jornadas Medicas') --}}<img src="{{asset('images/carpermor.gif')}}" alt="" height="30px" >
+                    {{-- config('app.name', 'Jornadas Medicas') --}}<img src="{{asset('images/carpermor.gif')}}" alt="" height="60px" >
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -56,9 +56,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Descargue su constancia aquí') }}</a>
                             </li>
-                            @if (Route::has('medicos.create'))
+                            @if (Route::has('registro.create'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('medicos.create') }}">{{ __('Cliente No Resgitrado') }}</a>
+                                    <a class="nav-link" href="{{ route('registro.create') }}">{{ __('Cliente No Resgitrado') }}</a>
                                 </li>
                             @endif
                         @else

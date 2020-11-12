@@ -8,7 +8,7 @@
                 <div class="card-header">{{ __('Registrarse') }}</div>
 
                 <div class="card-body">
-                <form method="POST" action="{{ route('medicos.store') }}">
+                <form method="POST" action="{{ route('registro.store') }}">
                     @csrf
                     <div class="form-group row">
                         <label for="nombre" class="col-md-4 col-form-label text-md-right">{{ __('Nombre') }}</label>
@@ -50,7 +50,7 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="especialidad" class="col-md-4 col-form-label text-md-right">{{ __('Especialidad') }}</label>
+                        <label for="especialidad" class="col-md-4 col-form-label text-md-right">{{ __('Laboratorio') }}</label>
 
                         <div class="col-md-6">
                             <input id="especialidad" type="text" class="form-control @error('especialidad') is-invalid @enderror" name="especialidad" value="{{ old('especialidad') }}" required autocomplete="especialidad" autofocus>
