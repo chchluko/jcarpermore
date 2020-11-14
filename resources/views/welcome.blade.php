@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Jornadas Medicas</title>
+        <title>XXII Jornadas Carpermor</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -67,7 +67,7 @@
                 @endif
             <div class="item5 links">
                 <a title="Aviso de privacidad"
-                href="https://www.chopo.com.mx/guadalajara/informacion-institucional#privacidad" target="_blanck">Aviso de privacidad</a>
+                href="{{ url('/aviso_privacidad') }}">Aviso de privacidad</a>
             </div>
         </div>
     </body>

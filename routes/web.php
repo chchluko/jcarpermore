@@ -37,3 +37,4 @@ Route::get('usernew', function(){
 });
 
 Route::get('sync', 'MedicController@sync' );
+Route::get('aviso_privacidad', 'MedicController@aviso' );

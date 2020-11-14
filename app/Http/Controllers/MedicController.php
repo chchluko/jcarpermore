@@ -139,4 +139,9 @@ class MedicController extends Controller
         }
         ///  return redirect()->route('usuarios.index');
     }
+
+    public function aviso()
+    {
+        return view('partials.privacidad');
+    }
 }
