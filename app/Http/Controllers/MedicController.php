@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Medic;
+use App\Lab;
 use App\User;
+use App\Medic;
 use Illuminate\Http\Request;
 
 
@@ -123,8 +124,8 @@ class MedicController extends Controller
 
     public function sync()
     {
-        $Medicos = Medic::where('iduser', '!=', NULL)->where('sync', 0)->offset(0)->limit(10000)->get();
-  //             dd($Medicos);
+        $Medicos = Lab::where('iduser', '!=', NULL)->where('sync', 0)/*->offset(0)->limit(10000)*/->get();
+              // dd($Medicos);
         foreach ($Medicos as $item) {
 
             $user = new User();
