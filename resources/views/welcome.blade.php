@@ -40,7 +40,7 @@
         }
         .links > a {
             /*color: #00E3B6;*/
-            color: white;
+            color: #00A791;
             font-family: 'Gotham';
             padding: 0 25px;
             letter-spacing: .1rem;
@@ -48,13 +48,13 @@
             /*   text-transform: uppercase;*/
             font-size: 1.5vw;
             }body{
-                background-color: #00E3B6;
+                background-color: white;
             }
         </style>
     </head>
     <body>
         <div class="container">
-            <div class="item1"><img src="{{asset('images/top.jpg')}}" alt=""></div>
+            <div class="item1"><img src="{{asset('images/top2021.jpg')}}" alt=""></div>
                 @if (Route::has('login'))
                     @auth
                         <div class="item2 links"><a href="{{ url('/home') }}">Inicio</a></div>
