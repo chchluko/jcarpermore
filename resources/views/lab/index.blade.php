@@ -1,8 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
-
+<div class="container">
    <div class="col-auto d-flex flex-column">
         <div>
             <h2>Constancias</h2>
@@ -38,6 +37,6 @@
 @include('partials.arte');
     </div>
 
-
+</div>
 
 @endsection

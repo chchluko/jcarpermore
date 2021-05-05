@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{-- config('app.name', 'Jornadas Medicas') --}}XXII Jornadas Carpermor</title>
+    <title>{{-- config('app.name', 'Jornadas Medicas') --}}Carpermor - Laboratorio de Referencia Internacional</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>

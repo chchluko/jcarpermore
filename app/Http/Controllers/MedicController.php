@@ -76,8 +76,8 @@ class MedicController extends Controller
         $pdf->loadHTML($view);
 
         $pdf->setPaper('letter', 'landscape');
-        //return $pdf->download('Constancia jornadas Carpermor 2020.pdf');
-         return $pdf->stream();
+       return $pdf->download('Constancia - Webinar Anticuerpos totales cuantitativos antiSARS-CoV-2.pdf');
+         // return $pdf->stream();
     }
 
     /**
