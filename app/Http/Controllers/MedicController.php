@@ -76,7 +76,7 @@ class MedicController extends Controller
         $pdf->loadHTML($view);
 
         $pdf->setPaper('letter', 'landscape');
-       return $pdf->download('Constancia - Webinar Anticuerpos totales cuantitativos antiSARS-CoV-2.pdf');
+       return $pdf->download('Constancia - SARS-CoV-2 Actualización en el Laboratorio Clínico.pdf');
          // return $pdf->stream();
     }
 

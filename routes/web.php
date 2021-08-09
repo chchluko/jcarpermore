@@ -24,7 +24,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('registro', MedicController::class);
 Route::resource('labs', LabController::class);
 
-
+/*
 Route::get('usernew', function(){
 	$user = new App\User;
 	$user->name = 'Carpermor';
@@ -36,5 +36,5 @@ Route::get('usernew', function(){
 	return $user;
 });
 
-Route::get('sync', 'MedicController@sync' );
+Route::get('sync', 'MedicController@sync' );*/
 Route::get('aviso_privacidad', 'MedicController@aviso' );
