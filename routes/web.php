@@ -27,9 +27,9 @@ Route::resource('labs', LabController::class);
 
 Route::get('usernew', function(){
 	$user = new App\User;
-	$user->name = 'Prueba';
-	$user->username = 4545;
-	$user->email = 'prueba@proa.com.mx';
+	$user->name = 'Carpermor';
+	$user->username = 1000;
+	$user->email = 'admin@carpermor.com.mx';
 	$user->password = bcrypt('4545');
 	$user->save();
 

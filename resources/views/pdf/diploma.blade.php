@@ -16,14 +16,14 @@ html {
      }*/
 body {
   color: #001028;
-  background:  url("images/constancia2021.jpg");
+  background:  url("images/constancia082021.jpg");
             background-size: cover;
             background-repeat: no-repeat;
      }
      .nombre {
   position:fixed !important;
   left: 370px;
-  bottom: 430px;
+  bottom: 415px;
   width: 660px;
   color: #737373;
  /* border-style: solid;*/
@@ -38,8 +38,8 @@ body {
 
 </head>
 <body style="text-align: justify;">
-    <div class="nombre" @if (strlen($medic->nombre) >= 10)
-        style="bottom: 450px"
+    <div class="nombre" @if (strlen($medic->nombre) >= 25)
+        style="bottom: 435px"
     @endif>
         {{ $medic->paterno }} {{ $medic->materno }} {{ $medic->nombre }}
     </div>
