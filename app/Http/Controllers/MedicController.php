@@ -75,9 +75,9 @@ class MedicController extends Controller
         // $pdf->loadHTML('<h1>Test</h1>');
         $pdf->loadHTML($view);
 
-        $pdf->setPaper('letter', 'landscape');
-       return $pdf->download('Constancia - SARS-CoV-2 Actualización en el Laboratorio Clínico.pdf');
-         // return $pdf->stream();
+        $pdf->setPaper('legal', 'portrait');
+     return $pdf->download('Constancia - XXIII JORNADAS CARPERMOR.pdf');
+        //    return $pdf->stream();
     }
 
     /**
