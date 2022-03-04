@@ -16,15 +16,15 @@ html {
      }*/
 body {
   color: #001028;
-  background:  url("images/constancia112021.jpg");
+  background:  url("images/constancia032022.jpg");
             background-size: cover;
             background-repeat: no-repeat;
      }
      .nombre {
   position:fixed !important;
-  left: 90px;
-  bottom: 871px;
-  width: 660px;
+  left: 145px;
+  bottom: 458px;
+  width: 800px;
   color: #737373;
   /*border-style: solid;*/
   text-align: center;

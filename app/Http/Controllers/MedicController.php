@@ -75,8 +75,8 @@ class MedicController extends Controller
         // $pdf->loadHTML('<h1>Test</h1>');
         $pdf->loadHTML($view);
 
-        $pdf->setPaper('legal', 'portrait');
-     return $pdf->download('Constancia - XXIII JORNADAS CARPERMOR.pdf');
+        $pdf->setPaper('letter', 'landscape');
+     return $pdf->download('Constancia - Webinar - Marcadores de Inmunohistoquimica.pdf');
         //    return $pdf->stream();
     }
 
