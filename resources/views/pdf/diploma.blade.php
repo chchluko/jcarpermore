@@ -16,14 +16,14 @@ html {
      }*/
 body {
   color: #001028;
-  background:  url("images/constancia032022.jpg");
+  background:  url("images/constancia072022.jpg");
             background-size: cover;
             background-repeat: no-repeat;
      }
      .nombre {
   position:fixed !important;
   left: 145px;
-  bottom: 458px;
+  bottom: 465px;
   width: 800px;
   color: #737373;
   /*border-style: solid;*/

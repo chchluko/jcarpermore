@@ -75,9 +75,9 @@ class MedicController extends Controller
         // $pdf->loadHTML('<h1>Test</h1>');
         $pdf->loadHTML($view);
 
-        $pdf->setPaper('letter', 'landscape');
-     return $pdf->download('Constancia - Webinar - Marcadores de Inmunohistoquimica.pdf');
-        //    return $pdf->stream();
+       // $pdf->setPaper('letter', 'landscape');
+       return $pdf->download('Constancia - Webinar - Citogenética clásica a la Citogenómica.pdf');
+          return $pdf->stream();
     }
 
     /**
